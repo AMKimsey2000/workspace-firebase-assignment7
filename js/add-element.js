@@ -3,14 +3,7 @@
  */
 
 // get all the hot class elements- change them to cool class
-/* JavaScript Method
-var list = document.querySelectorAll("li.hot");
-for (var i = 0; i < list.length; i++) {
-  list[i].setAttribute("class", "cool")
-}
-*/
-
-$("li.hot").toggleClass("hot cool"); //JQuery method
+$("li.hot").toggleClass("hot cool");
 
 // traverse the elements
 
