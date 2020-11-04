@@ -3,7 +3,7 @@
  */
 
 // get all the hot class elements- change them to cool class
-$("li.hot").toggleClass("hot cool");
+$("li.hot").removeClass("hot").addClass("cool");
 
 // traverse the elements
 
@@ -11,25 +11,22 @@ $("li.hot").toggleClass("hot cool");
 // add a new element
 
 
-// add by clicking the plus sign
-document.getElementById("add").addEventListener("click", addElement);
-
+$("#add").click(addElement);
 function addElement() {
-  // add a new element
-  
+  var newEle = $("#todo").append("<li><input type = 'text'></li>");
+  $("input").blur(function() {
+    $(this).parent().addClass("cool");
+    $(this).parent().text($(this).val());
+    $(this).remove();
+  });
 }
 
-
-//  click the li element will change the changeStyle
+$("li").click(changeStyle);
 function changeStyle() {
-
+  $(this).toggleClass("complete", "cool");
 }
 
-// delete by clicking the trash can
-document.getElementById("remove").addEventListener("click", removeElement);
-
+$("#remove").click(removeElement);
 function removeElement() {
-  // remove the marked element
- 
- 
+  $(".complete").remove();
 }
