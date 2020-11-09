@@ -16,8 +16,15 @@ import * as firebaseui from "firebaseui";
 //  Code for later database connection Please ignore.
 
 // Add Firebase project configuration object here
-var firebaseConfig = {
-
+const firebaseConfig = {
+  apiKey: "AIzaSyA36sUzMsdEYel8St87dZDh10vLbyLc_Ow",
+  authDomain: "fire-assign7.firebaseapp.com",
+  databaseURL: "https://fire-assign7.firebaseio.com",
+  projectId: "fire-assign7",
+  storageBucket: "fire-assign7.appspot.com",
+  messagingSenderId: "300042996526",
+  appId: "1:300042996526:web:02cac17a21ed2e7507c8bf",
+  measurementId: "G-QSQ8750499"
 };
 
 firebase.initializeApp(firebaseConfig);
