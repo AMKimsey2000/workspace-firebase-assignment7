@@ -22,7 +22,6 @@ $("#remove").click(function() {
 
 $("#hiddenTheme").contextmenu(function() { //contextmenu just means right click
   var newTheme = (currTheme == "cool" ? "hot" : "cool");
-  console.log(newTheme);
   $("#todo li").each(function() {
     $(this).removeClass(currTheme).addClass(newTheme);
   })
