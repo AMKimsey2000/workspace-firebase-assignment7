@@ -32,4 +32,14 @@ firebase.initializeApp(firebaseConfig);
 
 
 // Save the list to database
-
+$("#save").click(function() {
+  var compiledObj = {};
+  $("#todo li").each(function(index) {
+    compiledObj["item" + index] = $(this).text()
+  });
+  firebase.firestore().collection("main-list").add(compiledObj);
+  $(this).text("Saved successfully");
+  setTimeout(function() {
+    $("#save").text("Save");
+  }, 3000);
+});
